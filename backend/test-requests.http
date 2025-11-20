@@ -1,0 +1,80 @@
+### CREATE five documents.
+POST http://localhost:3000/jobs HTTP/1.1
+content-type: application/json
+
+{
+    "company": "Google",
+    "wage": 20.50,
+    "startDate": "2018/09/29"
+}
+
+### CREATE 2
+POST http://localhost:3000/jobs HTTP/1.1
+content-type: application/json
+
+{
+    "company": "Microsoft",
+    "wage": 18.75,
+    "startDate": "2017/02/02"
+}
+
+### CREATE 3
+POST http://localhost:3000/jobs HTTP/1.1
+content-type: application/json
+
+{
+    "company": "Amazon",
+    "wage": 25.00,
+    "startDate": "2015/07/08"
+}
+
+### CREATE 4
+POST http://localhost:3000/jobs HTTP/1.1
+content-type: application/json
+
+{
+    "company": "Apple",
+    "wage": 22.99,
+    "startDate": "2020/12/22"
+}
+
+### CREATE 5
+POST http://localhost:3000/jobs HTTP/1.1
+content-type: application/json
+
+{
+    "company": "Facebook",
+    "wage": 30.25,
+    "startDate": "2019/11/11"
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/jobs HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/jobs/65e50f2d3fb069f4b1c96926 HTTP/1.1
+
+
+### UPDATE one document's wage, by ID.
+### Replace the ID in the following request with one that exists
+### and update the wage:
+PUT http://localhost:3000/jobs/65e50f1e3fb069f4b1c9691e HTTP/1.1
+content-type: application/json
+
+{
+    "company": "Google",
+    "wage": 28.00,
+    "startDate": "2021/03/04"
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/jobs/65e50f2a3fb069f4b1c96924 HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/jobs HTTP/1.1

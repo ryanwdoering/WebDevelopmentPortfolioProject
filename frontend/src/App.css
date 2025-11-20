@@ -1,0 +1,321 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */         
+  /* @import "component1.css";   Component-specific stylesheets, if any.   */
+  /* @import url(//fonts.googleapis.com/css?family=Font+Name); Add fonts from a hosted services like Google Fonts.   */
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Oswald:wght@400;700&display=swap');
+/*   ----- Variables  -----  */
+
+:root {
+  --oceanblue:#0460D9;
+  --midblue:#0347A0cc;
+  --deepblue: #082359;
+  --jellypink:#F5ECFF;
+  /*--custom-embellishment-name:;*/
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {       /* Can alternatively define in html {}. */
+  background-attachment: fixed;
+  background-color: var(--deepblue);
+  background-image:url(images/jellyfish_background.jpg);
+  background-position: 0%;
+  background-size: fill;
+  /*color:;*/
+  font-family:'Libre Baskerville', serif; /* Define with at least one font name and its related generic family name.*/
+  margin:0;
+  padding:1.5%;
+  width: 4000
+}
+
+/*  ----- Page layout blocks -----  */
+header {
+    margin: 25px;
+    padding: 10px;
+    border: 20px var(--deepblue);
+    background-color: var(--deepblue);
+    min-width: fit-content;
+    text-align: center;
+    }
+header img{height: 50px;
+width: 50px;}
+main {
+    background-color: var(--deepblue);
+    margin: 25px;
+    padding: 10px;
+    border: 3px var(--deepblue);
+    color: var(--jellypink);
+}
+section {background-color: var(--oceanblue);
+    margin: 25px;
+    padding: 10px;
+    border: 3px var(--deepblue);
+}
+article {}
+  #topic1 {}
+  #topic2 {}
+  .gallery{
+    background-color: var(--deepblue);
+    margin: 25px;
+    padding: 10px;
+    border: 3px var(--deepblue);
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .gallery figure{
+    display: flex;
+    width: 1000px;
+    background-color: var(--oceanblue);
+    margin: 25px;
+    padding: 10px;
+    border: 3px var(--deepblue);
+    color: var(--jellypink);
+    font-size: large;
+    text-align: center;
+  }
+  .gallery figure figcaption{text-align: center;
+    vertical-align: middle;
+  }
+  .gallery figure img{
+    max-height: 400 px;
+    max-width: 400 px;
+  }
+div {}
+aside {}
+footer {  margin: 25px;
+    padding: 10px;
+    border: 3px var(--deepblue);
+    background-color: var(--deepblue);
+    color: var(--jellypink);
+  }
+
+/* ----- Anchors ----- Text links */
+a {}
+a:link {
+    color:var(--jellypink);
+    background-color: var(--deepblue);
+
+}
+a:hover {
+    background-color: var(--midblue);
+}
+a:active {}
+a:visited {
+    color:var(--jellypink);
+}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav {  text-align:center;
+    display:flex;
+    flex-flow:row wrap;
+    background-color: var(--deepblue);
+  }
+nav a {  background-color: var(--deepblue);
+    border:2px solid var(--jellypink);
+    border-radius:5px 5px 0 0; 
+    color:var(--jellypink);
+    font-weight:bold;
+    margin-right:3px;
+    padding: 3px 20px 5px 20px;
+    text-decoration:none;}
+
+nav a:hover { background-color: var(--jellypink);
+color: var(--deepblue);}
+
+
+.local a {
+    background-color: var(--jellypink);
+    color: var(--deepblue);
+    border:2px solid var(--deepblue);
+    font-weight:bold;
+    margin-right:3px;
+    padding: 3px 20px 5px 20px;
+    text-decoration:none;
+}
+.local a:hover {
+    background-color: var(--midblue);
+    color: var(--jellypink);
+}
+
+/*  -----  Typography  ----- */
+p {}
+br {}
+ol, ul, dl {}
+li {}
+dt {}
+dd {}
+
+h1, h2, h3, h4, h5, h6 {font-family: 'Oswald', sans-serif;} 
+h1 {
+    background-color: var(--deepblue); 
+    color: var(--jellypink);
+    }
+h2 {background-color: var(--oceanblue); 
+    color: var(--jellypink)}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+abbr {}
+acronym {}
+address {}
+blockquote {}
+  q {}
+  cite {}
+em {}
+hr {}
+mark {}
+s {}
+span {}
+strong {}
+sub {}
+sup {}
+time {}
+
+/*  ----- Coding or instructional typography ----- */
+pre {}
+code {}
+kbd {}
+samp {}
+var {}
+del {} 
+ins {}
+
+/*  ----- Table ----- */
+table {
+  background-color: var(--jellypink);
+  color: var(--oceanblue);
+}
+caption {  
+  background-color: var(--deepblue);
+  border:1px var(--deepblue); 
+  color: var(--jellypink); 
+  font-weight:bold; 
+  padding:1% 0; }
+thead {
+  border:10px var(--deepblue);
+  background-color: aliceblue;
+}
+tbody {
+  border:10px var(--deepblue);
+}
+tfoot {
+}
+tr {
+  border-color: 1px var(--deepblue);
+}
+  tr:nth-child(even) {background-color: aliceblue;}
+th {}
+td {
+  border: 10px var(--deepblue);}
+  td:nth-child(odd) {}
+colgroup {}
+data {}
+datalist {}
+
+
+/*  ----- Form ----- */
+form {
+  background-color: var(--deepblue);
+  margin: 25px;
+  padding: 10px;
+  border: 3px var(--deepblue);
+  display: flex;
+  flex-flow: row wrap;}
+fieldset {
+  background-color: var(--midblue);
+  margin: 25px;
+  padding: 10px;
+  border: 3px var(--deepblue);
+  text-align: center;
+  display:grid;
+}
+legend {
+  min-height: fit-content;
+  min-width: fit-content;
+  background-color: var(--oceanblue);
+  margin: 25px;
+  padding: 10px;
+  border: 3px var(--jellypink);
+  text-align: center;
+}
+label {
+  text-align: center;}
+button {    margin: 25px;
+  padding: 10px;
+  border: 3px var(--deepblue);
+  text-align: center;
+  background-color: var(--jellypink);
+  color: var(--deepblue);
+}
+input {    margin: 10px;
+  padding: 10px;
+  border: 3px var(--deepblue);
+  text-align: center;
+  background-color: var(--jellypink);
+  color: var(--deepblue);
+}
+select {}
+  optgroup {}
+  option {}
+textarea {
+  padding: 10px;
+  border: 3px var(--deepblue);
+  text-align: center;
+  background-color: var(--jellypink);
+  color: var(--deepblue);}
+output {}
+meter {}
+progress {}
+
+
+/* ----- Media ----- */
+figure {}
+  figcaption {}
+  figure img {}
+svg {}
+picture {}
+  source {}
+iframe {}
+video {}
+audio {}
+embed {}
+object {}
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+.gallery {}
+
+.floatright {}
+.floatleft {}
+.center-middle {}
+
+.ten {}
+.twenty {}
+.thirty {}
+.forty {}
+.fifty {}
+.sixty {}
+.seventy {}
+.eighty {}
+
+.radius {}
+.circle {}
+.boxshadow {}
+.tshadow {} 
+.gradient {}
+.shape {}
+
+@keyframes App-logo {}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {}
